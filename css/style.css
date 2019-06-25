@@ -141,6 +141,20 @@ body {
     .legal {
       display: none; } }
 
+.advertising {
+  display: flex;
+  margin: 2rem; }
+  .advertising__main {
+    flex: 2; }
+  .advertising__image-container {
+    max-width: 100%; }
+  .advertising__image {
+    width: 100%;
+    display: block; }
+  .advertising__form {
+    flex: 1;
+    background-color: whitesmoke; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -194,5 +208,45 @@ body {
     .sidebar {
       min-height: 1rem; } }
 
+.main-view {
+  width: 100%;
+  font-size: 1.6rem; }
+
 .ooo {
   flex: 1; }
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.form__input {
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: inherit;
+  padding: .6rem 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  border: none;
+  display: block;
+  transition: all .3s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+
+.btn {
+  font-size: 1.2rem;
+  font-family: inherit;
+  color: #5C6BC0;
+  background-color: transparent;
+  padding: .6rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  border-bottom: 1px solid #5C6BC0; }
+  .btn:hover span {
+    margin-left: .5rem; }
+  .btn:focus {
+    outline: none;
+    font-size: 1.4rem; }
