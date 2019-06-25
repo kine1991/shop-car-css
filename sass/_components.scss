@@ -167,22 +167,34 @@
 .advertising{
     display: flex;
     margin: 2rem;
+    background-color: whitesmoke;
+    box-shadow: 0 1rem 2rem rgba(black, .1);
     
     &__main {
         flex: 2;
     }
     &__image-container {
         max-width: 100%;
-        
     }
     &__image {
         width: 100%;
         display: block;
-
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
     }
     &__form {
         flex: 1;
-        background-color: whitesmoke;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        &__form{
+            display: none;
+        }
+
+        &__image {
+            width: 100%;
+            display: block;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
     }
 }
 
