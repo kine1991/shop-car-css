@@ -571,3 +571,59 @@ body {
   .navigation__checkbox:checked ~ .navigation__button > .navigation__icon::after {
     transform: rotate(-315deg);
     top: 0; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal__content {
+    width: 70%;
+    height: 70%;
+    background-color: #f4f2f2;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 3rem;
+    display: flex; }
+  .modal__img {
+    flex: 1; }
+    .modal__img > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .modal__text {
+    flex: 2;
+    padding: 2rem;
+    font-size: 1.5rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem;
+    -moz-column-rule: 1px solid #999;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #999;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow: hidden; }
+  .modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem; }
+  .modal:target {
+    opacity: 1;
+    visibility: visible; }
+  .modal:target .modal__content {
+    opacity: 1; }
